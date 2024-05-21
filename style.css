@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    cursor: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #00c9ff, #92fe9d);
+    position: relative;
+}
+
+.container {
+    position: relative;
+
+}
+
+.calculator {
+    border: 1px solid #717377;
+    padding: 20px;
+    border-radius: 16px;
+    background: #f7c6c7;
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+}
+
+input {
+    width: 320px;
+    border: none;
+    padding: 20px;
+    margin: 10px;
+    background: #f4f4f4;
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.1);
+    font-size: 36px;
+    text-align: right;
+    color: #2c3e50;
+    border-radius: 8px;
+}
+
+input::placeholder {
+    color: #2c3e50;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #717377;
+    background: #a8dadc;
+    color: #2c3e50;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 50%;
+    margin: 10px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+}
+
+.equalBtn {
+    background-color: #d11d0c;
+    color: #ffffff;
+}
+
+.operator {
+    background-color: #6dee0a;
+    color: #333333;
+}
+
+button.click-effect {
+    transform: scale(0.9);
+    box-shadow: inset -8px -8px 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    animation: cursorAnimation 0.5s infinite alternate;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes cursorAnimation {
+    from {
+        transform: scale(1);
+        background-color: transparent;
+    }
+
+    to {
+        transform: scale(1.2);
+        background-color: rgba(85, 85, 85, 0.5);
+    }
+}
